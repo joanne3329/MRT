@@ -1,0 +1,92 @@
+/* ... 原有的 CSS ... */
+
+.container {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filters {
+    width: 300px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.line-filters, .district-filters {
+    margin-bottom: 20px;
+}
+
+.line-item, .district-item {
+    margin: 8px 0;
+}
+
+.wheel-container {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+canvas {
+    max-width: 500px;
+    max-height: 500px;
+    margin-bottom: 20px;
+}
+
+#spin {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#spin:hover {
+    background: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* 捷運線路顏色 */
+.line-red { color: #e3002c; }
+.line-blue { color: #0070bd; }
+.line-brown { color: #c48c31; }
+.line-green { color: #008659; }
+.line-orange { color: #f8b61c; }
+.line-yellow { color: #ffdb00; }
+
+/* 勾選框樣式 */
+.line-filters input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.line-filters label {
+    font-weight: bold;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .filters {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
